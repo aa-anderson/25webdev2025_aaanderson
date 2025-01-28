@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Form Elements</h1>
+     <!-- Form using basic input types -->
+     <!-- For more on form elements peep the W3 schools tutorials -->
+
+     <p>The for action attribute ussually contains a link to a file or location to process the form data
+     </p>
+     <!-- <form 
+        action="js/create-profile.js" 
+        method="GET" 
+        target="_self" 
+        name="user-create">  
+     </form> -->
+      <!-- name tells us what table the form goes to -->
+       <p>
+        The name attribute for the form element = how a scrift can diffrenciate this form from others. 
+        Or it tells us what table in the database to write to.
+       </p>
+       <form name="user-create">
+         </fieldset>
+            <legend> Simple Text Inputs</legend>
+            <p>
+                This is your most basic text input. We change input types with type attribute
+            </p>
+            <label for="first-name"> First Name" </label>
+                <input name="first-name" type="text" />
+            <label for="last-name">Last Name</label>
+            <input name="last-name" type="text" maxlength="10" placeholder="Smith" required/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Common input types</legend>
+        <label for="age">Age: </label>
+        <input name="age" type="number" step="0.01" max="100" min="10"/>
+        <label for="password">Password: </label>
+        <input type="password" name="password"/>
+        <label type="color">Favorite Color</label>
+        <input type="color" name="color"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <p>
+                Checkboxes allow the user to select more than one option/value for the same field.
+                <em>
+                    Each checkbox in the same group has the sae name but different values!
+                </em>
+            >
+            </p>
+            <p>
+                What pets do you have?</p>
+        
+        </fieldset>
+
+       <input type="button" value="submit" name="user-submit" disabled/>
+       <button 
+        title="This is a much better submit button" name="submit-user"> 
+        Submit Form
+     </button>
+    </form>  
+  </body>
+</html>
