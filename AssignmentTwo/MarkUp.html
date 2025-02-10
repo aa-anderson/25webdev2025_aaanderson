@@ -1,87 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
     <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Recipe Page</title>
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>My Recipe Wire Frame</title>
+   
+    
   </head>
   <body>
-    <!-- header -->
-    <header>
-      <h1>My Recipe Wire Frame</h1>
-      <nav>
-        <a href="#Home">Home</a> |
-        <a href="#About">About</a> |
-        <a href="#Contact">Contact</a>
-      </nav>
-    </header>
+    <!-- everything inside the body tag shows up to the user unless
+     modified to not be visible with css -->
 
-    <!-- main content -->
-    <main>
-      <!-- recipe -->
-      <article>
-        <!-- image  -->
-        <section>
-          <h3>Image Here</h3>
-        </section>
+    <!-- ONLY 1 H1 per page -->
+    <fieldset>
 
-        <!-- recipe title and description -->
-        <section>
-          <h2>Recipe Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia, velit eget
-            laoreet elementum, ligula purus tristique sapien, sed fermentum elit arcu eu lectus.
-          </p>
-        </section>
+            <h1>Logo </h1>
+        <div style="text-align: right;">
+          <a href="#Home">Home</a> |
+          <a href="#About">About</a> |
+          <a href="#Contact">Contact</a>
+        </div>
+      </fieldset>
+      <br/>
 
-        <!-- ingredients -->
-        <section>
-          <h3>Ingredients</h3>
-          <ul>
-            <li>Lorem ipsum dolor sit amet.</li>
+      <fieldset >
+
+        <div>
+            <p>
+                <h3>Image Here</h3>
+            </p>
+        </div>
+      </fieldset>
+      <br/>
+
+      <fieldset >
+      <h3>Recipe Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia, velit eget laoreet elementum, ligula purus tristique sapien, sed fermentum elit arcu eu lectus. Morbi vel sapien vitae metus varius varius. Proin auctor purus at quam facilisis, nec feugiat lorem condimentum. In malesuada dui ac nunc cursus, eu facilisis libero pretium. Nunc ultricies convallis risus ac varius. Fusce auctor nisl sit amet magna tincidunt, eu egestas augue dapibus. Mauris euismod feugiat sollicitudin. Sed fringilla augue eget ex interdum, nec porttitor lectus faucibus. Nunc vehicula mauris eget risus convallis, at scelerisque orci efficitur. Cras sagittis, ipsum sed feugiat convallis, libero felis posuere lectus, in pretium magna dolor ac libero. 
+             </p>
+
+      <h3>Ingredients</h3>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </li>
             <li>Morbi vel sapien vitae metus varius varius.</li>
-            <li>Proin auctor purus at quam facilisis.</li>
-            <li>In malesuada dui ac nunc cursus.</li>
-            <li>Nunc ultricies convallis risus ac varius.</li>
-          </ul>
-        </section>
+            <li>Proin auctor purus at quam facilisis, nec feugiat lorem condimentum.</li>
+            <li>n malesuada dui ac nunc cursus, eu facilisis libero pretium.f</li>
+            <li>z aNunc ultricies convallis risus ac varius.mount of</li>
+        </ul>
 
-        <!-- directions -->
-        <section>
-          <h3>Directions</h3>
-          <ol>
-            <li>Fusce auctor nisl sit amet magna tincidunt.</li>
-            <li>Mauris euismod feugiat sollicitudin.</li>
-            <li>Sed fringilla augue eget ex interdum.</li>
-            <li>Nunc vehicula mauris eget risus convallis.</li>
-            <li>Cras sagittis ipsum sed feugiat convallis.</li>
-          </ol>
-        </section>
+        <h3>Directions</h3>    
+            <ol>
+                <li>Fusce auctor nisl sit amet magna tincidunt, eu egestas augue dapibus.</li>
+                <li>Mauris euismod feugiat sollicitudin.</li>
+                <li>Sed fringilla augue eget ex interdum, nec porttitor lectus faucibus</li>
+                <li>Nunc vehicula mauris eget risus convallis, at scelerisque orci efficitur.</li>
+                <li>Cras sagittis, ipsum sed feugiat convallis, libero felis posuere lectus, in pretium magna dolor ac libero</li> 
+            </ol>
+        </fieldset>
 
-        <!-- nutrition  -->
-        <section>
-          <h3>Nutrition Facts (per serving)</h3>
-          <pre>
-Calories:    Fat:    Carbs:    Protein:
-          </pre>
-        </section>
-      </article>
-    </main>
+        <h3>Nutrition Facts (per serving)</h3>
+        <pre>
+        Calories:    Fat:    Carbs:    Protein:
+        </pre>
 
-    <!-- side column -->
-    <aside>
-      <h3>Collage of Other Recipes</h3>
-    </aside>
+        <fieldset>
+            <h3>Collage of other recipe's here</h3>
+        </fieldset>
 
-    <!-- footer -->
-    <footer>
-      <p>Author: John Smith</p>
-      <p>Email: <a href="mailto:johnsmith@example.com">johnsmith@example.com</a></p>
-      <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-      <p>Social Media: 
-        <a href="https://twitter.com/johnsmith" target="_blank">Twitter</a> |
-        <a href="https://facebook.com/johnsmith" target="_blank">Facebook</a>
-      </p>
-    </footer>
+        <footer>
+            <p>Author: John Doe</p>
+            <p>Email: <a href="#mailto:johndoe@example.com">johndoe@example.com</a></p>
+            <p>Phone: <a href="#tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Social Media: 
+                <a href="#https://twitter.com/johnsmith">Twitter</a> |
+                <a href="#https://facebook.com/johnsmith">Facebook</a>
+            </p>
+        </footer>
   </body>
 </html>
