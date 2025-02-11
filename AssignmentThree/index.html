@@ -23,7 +23,10 @@
         text-align: right;
         font-size: 0;
         border: 5px solid bisque;
-        padding: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+        
       }
 
       nav ul li {
@@ -61,28 +64,40 @@
     width: 300px; 
     height: 300px;
     object-fit: cover; 
-}
-.image-container {
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-end; 
-    gap: 10px; 
-    position: absolute;
-    margin-top: 24px;
-    margin: 2rem 1rem;
-    margin: 1rem 2rem 3rem 4rem;
-    padding: 1rem;
+    object-fit: cover;
+    border: 10px solid bisque ;
+    margin-left: 15px;
+  }
+  fieldset{
+    margin-left: 15px;
+  }
+  footer{
+    margin-left: 15px;
+  }
+  h2{
+    margin-left: 15px;
+  }
+  .mainContent{
+    width: 60%;
 
-    
-}
+  }
+  .columnOne{
+    width: 38%;
+    background-color: bisque;
+    position:relative;
+    height:auto;
+    text-align: center;
+    margin-right: 15px;
+    margin-top: -794px;
+    margin-left: 100px;
 
-.image-container img {
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover; 
-    
-}
-
+  }
+  .contentBox{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+  }
+ 
 
 
 </style>
@@ -90,16 +105,14 @@
     </style>
   </head>
   <body>
-    
 
 <!--menue bar-->
     <nav id="main-menu">
         <h1 style="display: inline; margin-right: 20px;">LOGO</h1>
         <ul>
-          <li><a href="#" class="active">Link 1</a></li>
           <li><a href="#Home">Home</a></li>
-          <li><a href="#About">About 3</a></li>
-          <li><a href="#Contact">Contact 4</a></li>
+          <li><a href="#About">About </a></li>
+          <li><a href="#Contact">Contact </a></li>
           </ul>
 
       </nav>
@@ -115,32 +128,48 @@
     </div>
 <!--image end-->
   <br/>
-  <fieldset style="width: 60%;">
+<div class="contentBox">
+  <div class="mainContent">
     <h3 class="header" id="CallToAction">Recipe Title</h3>
-        <p>
+    <p>
             Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Vivamus lacinia, velit eget laoreet elementum, ligula purus tristique sapien, sed fermentum elit arcu eu lectus. Morbi vel sapien vitae metus varius varius. Proin auctor purus at quam facilisis, nec feugiat lorem condimentum. In malesuada dui ac nunc cursus, eu facilisis libero pretium. Nunc ultricies convallis risus ac varius. Fusce auctor nisl sit amet magna tincidunt, eu egestas augue dapibus. Mauris euismod feugiat sollicitudin. Sed fringilla augue eget ex interdum, nec porttitor lectus faucibus. Nunc vehicula mauris eget risus convallis, at scelerisque orci efficitur. Cras sagittis, ipsum sed feugiat convallis, libero felis posuere lectus, in pretium magna dolor ac libero. 
-         </p>
-
-         <h3 class="header" id="CallToAction">Ingredients</h3>
-    <ul style="color: olivedrab;"></ul>
+    </p>
+    <br/>
+    <h3 class="header" id="CallToAction">Ingredients</h3>
+    <ul style="text-decoration-color: olivedrab;"></ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </li>
         <li>Morbi vel sapien vitae metus varius varius.</li>
         <li>Proin auctor purus at quam facilisis, nec feugiat lorem condimentum.</li>
         <li>n malesuada dui ac nunc cursus, eu facilisis libero pretium.f</li>
         <li>z aNunc ultricies convallis risus ac varius.mount of</li>
     </ul>
-
+    <br/>
     <h3 class="header" id="CallToAction">Directions</h3>   
-        <ol>
-            <li>Fusce auctor nisl sit amet magna tincidunt, eu egestas augue dapibus.</li>
-            <li>Mauris euismod feugiat sollicitudin.</li>
-            <li>Sed fringilla augue eget ex interdum, nec porttitor lectus faucibus</li>
-            <li>Nunc vehicula mauris eget risus convallis, at scelerisque orci efficitur.</li>
-            <li>Cras sagittis, ipsum sed feugiat convallis, libero felis posuere lectus, in pretium magna dolor ac libero</li> 
-        </ol>
-    </fieldset>
+    <ol></ol>
+        <li>Fusce auctor nisl sit amet magna tincidunt, eu egestas augue dapibus.</li>
+        <li>Mauris euismod feugiat sollicitudin.</li>
+        <li>Sed fringilla augue eget ex interdum, nec porttitor lectus faucibus</li>
+        <li>Nunc vehicula mauris eget risus convallis, at scelerisque orci efficitur.</li>
+        <li>Cras sagittis, ipsum sed feugiat convallis, libero felis posuere lectus, in pretium magna dolor ac libero</li> 
+    </ol>
+  </div>
+  <div class="columnOne">
+    <figure>
+      <img src="/Images/Chocolate-Cake.jpeg" alt="ChocolateCake">
+      <figcaption> Try our New Tripple Chocolate Cake Recipe!</figcaption>
+    </figure>
+    <figure>
+      <img src="/Images/Confetti-Cake.jpeg" alt="ConfettiCake">
+      <figcaption>Dont Miss out on this Confetti Cake!</figcaption>
+    </figure>
+      <img src="/Images/Velvet-Cake.jpeg" alt="VelevetCake">
+      <figcaption>Nothing is Smoother than our Red Velvet Cake!</figcaption>
+  </figure>
+  </div>
 
-    <h3>Nutrition Facts <em>(per serving)</em></h3>
+</div>
+<br/>
+    <h2>Nutrition Facts <em>(per serving)</em></h2>
     <pre>
     Calories:    Fat:    Carbs:    Protein:
     </pre>
