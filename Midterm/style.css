@@ -116,14 +116,15 @@
     height: 100%;
   }
   .Home .gallery {
-    background-color: whitesmoke;
     color: black;
-    width: 155%;
-    height: 100%;
-    padding: 5%;
-    transform: translateX(-100px);
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     overflow-x: scroll;
     white-space: nowrap;
+    z-index: 0;
+    padding-bottom: 5px;
   }
 
   .Home .gallery-field img {
@@ -394,12 +395,11 @@
     color: black;
     position: relative;
     top: 0px;
-    height: 1290px;
+    height: 100%;
   }
   .London .intro-field {
     max-width: 900px;
     margin-left: 0;
-    padding-left: 60px;
     align-items: center;
     transform: translateX(200px);
     display: flex;
@@ -415,8 +415,6 @@
     color: black;
     position: relative;
     width: 100%;
-    top: -770px;
-    height: 670px;
     margin-left: 0;
     margin-right: 0;
     overflow-x: scroll;
@@ -428,14 +426,12 @@
     object-fit: cover;
     width: 300px;
     z-index: 0;
-    padding-bottom: 25px;
   }
-  .London .socials {
-    transform: translateY(210px) translateX(1380px);
-  }
+
   .London .gallery::-webkit-scrollbar {
     display: none;
   }
+
   .About .background {
     position: relative;
     width: 100%;
@@ -552,28 +548,36 @@
   .Home .intro-field {
     padding: 0 20px;
     max-width: 100%;
+
   }
   .Home .gallery {
-    width: 155%;
-    height: auto;
+    z-index: 1;
     overflow-x: auto;
+
   }
   .Home .gallery-field img {
     max-width: 100%;
-    height: auto;
+    height: 80vh;
+    object-fit: cover;
+    width: auto;
   }
   .Travel .intro {
     height: auto;
     padding: 20px;
     text-align: center;
+
   }
+  .Travel .Quote h3{
+    font-size: 24px;
+  }
+
   .London .entryphoto {
     height: 70vh;
     background-position: top;
   }
   .London .intro {
     width: 100%;
-    max-width: 200%; 
+    max-width: 100%; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -584,30 +588,44 @@
 }
 .London .intro p {
     width: 100%;
-    transform: translateX(-230px);
+    transform: translateX(-200px);
     max-width: 200%; 
     text-align: center;
+    padding-bottom: 0;
 }
   .London .intro-field {
     max-width: 100%;
   }
   .London .gallery {
-    padding-top: 400px;
-    width: 155%;
-    height: auto;
     overflow-x: auto;
     z-index: 1;
   }
   .London .gallery-field img {
     max-width: 100%;
-    height: auto;
+    height: 80vh; 
+    object-fit: cover;
+    width: auto;
   }
-  
-
-@media screen and (max-width: 425px) {
-  .Home .introPhoto {
-    translate: -10%;
-    height: 100%;
+  .About .background h3{
+    font-size: 14px;
   }
-}
+  .About .background h1{
+    font-size: 25px;
+  }
+  .Travel .gallery{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .Travel .London .info{
+    text-align: center;
+    font-size: 10px;
+  }
+  .Travel .Jamaica .info{
+    text-align: center;
+    font-size: 10px;
+  }
+  .Travel .Nantucket .info{
+    text-align: center;
+    font-size: 10px;
+  }
 }
