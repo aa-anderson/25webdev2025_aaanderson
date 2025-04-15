@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
+    <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>Checkpoint Travel Blog</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body class="Travel">
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="travel.html" class="active">Travel</a></li>
+      </ul>
+    </nav>
+
+    <div class="background">
+      <div class="Quote">
+        <h3>
+          <i>"I travel not to go anywhere, but to go.<br />I travel for travel's sake.<br />The great affair is to move."</i>
+        </h3>
+      </div>
+
+      <div class="travel-quiz">
+        <h2>Find Your Next Destination</h2>
+  
+        <label for="mood">How are you feeling?</label>
+        <select id="mood">
+          <option value="">Select one</option>
+          <option value="adventurous">Adventurous</option>
+          <option value="relaxed">Relaxed</option>
+          <option value="nostalgic">Nostalgic</option>
+        </select>
+  
+        <label for="weather">Preferred Weather?</label>
+        <select id="weather">
+          <option value="">Select one</option>
+          <option value="warm">Warm & Sunny</option>
+          <option value="cool">Cool & Crisp</option>
+        </select>
+  
+        <label for="vibe">Your Ideal Vibe?</label>
+        <select id="vibe">
+          <option value="">Select one</option>
+          <option value="city">City Life</option>
+          <option value="beach">Beach</option>
+          <option value="quiet">Peaceful</option>
+        </select>
+  
+        <button id="destination-button">Suggest a Place</button>
+        <div id="destination-result"></div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="London">
+        <article class="mask">
+          <h2>London</h2>
+          <a class="info" href="London.html">Learn More</a>
+        </article>
+      </div>
+      <div class="Jamaica">
+        <article class="mask">
+          <h2>Jamaica</h2>
+          <a class="info" href="Jamaica.html">Learn More</a>
+        </article>
+      </div>
+
+      <div class="Nantucket">
+        <article class="mask">
+          <h2>Nantucket</h2>
+          <a class="info" href="Nantucket.html">Learn More</a>
+        </article>
+      </div>
+    </div>
+    <div class="squareTwo">
+      <div class="socials-text">
+        <h2>Connect With Me!</h2>
+        <p>Phone:(123)-(456)-(7890)</p>
+        <p>Email: exampleemail@gmail.com</p>
+        <p>Location: City, State</p>
+      </div>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href="#"><img src="/Images/facebook.png" alt="Facebook" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="/Images/instagram.png" alt="Instagram" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="/Images/twitter.png" alt="Twitter" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("destination-button");
+        button.addEventListener("click", getDestination);
+      });
+  
+      function getDestination() {
+        const result = document.getElementById("destination-result");
+  
+        const destinations = [
+          {
+            name: "London",
+            link: "London.html"
+          },
+          {
+            name: "Jamaica",
+            link: "Jamaica.html"
+          },
+          {
+            name: "Nantucket",
+            link: "Nantucket.html"
+          }
+        ];
+  
+        const selected = destinations[Math.floor(Math.random() * destinations.length)];
+  
+        result.innerHTML = `
+          <p>Start your next adventure in <strong>${selected.name}</strong>!</p>
+          <a href="${selected.link}">Learn More</a>
+        `;
+        result.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
