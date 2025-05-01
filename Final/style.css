@@ -8,7 +8,7 @@
   .Home,
   .Travel,
   .London,
-  .About {
+  .contact {
     overflow-x: hidden;
   }
 
@@ -22,42 +22,43 @@
     background-repeat: no-repeat;
     position: relative;
   }
-.navbar{
-  width:100%;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  align-items:center;
-  justify-content: space-between;
-}
-.navbar ul li{
-  font-size:16px;
-  padding:10px;
-  display:flex;
-  list-style: none;
-  display: inline-block;
-  margin-left: 20px;
-  position:relative;
-}
-.navbar ul li a{
-  text-decoration:none;
-  font-weight: bold;
-  color: whitesmoke;
-  text-transform: uppercase;
-}
-.navbar ul li::after {
-  content: "";
-  height: 3px;
-  width: 0; 
-  background: whitesmoke;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  transition: width 0.3s ease-in-out; 
-}
-.navbar ul li:hover::after {
-  width: 100%; 
-}
+  .navbar{
+    width:100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .navbar ul li{
+    font-size:16px;
+    padding:10px;
+    display:flex;
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    position:relative;
+  }
+  .navbar ul li a{
+    text-decoration:none;
+    font-weight: bold;
+    color: whitesmoke;
+    text-transform: uppercase;
+  }
+  .navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0; 
+    background: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out; 
+  }
+  .navbar ul li:hover::after {
+    width: 100%; 
+  }
+
   .Home .slogan {
     width: 100%;
     display: flex;
@@ -316,10 +317,11 @@
   }
 
   .Travel .gallery {
-    display: flex;
-    flex-direction: row;
-    padding: 1%;
-    gap: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+    padding: 40px 5%;
   }
 
   .Travel .London {
@@ -360,10 +362,50 @@
     transition: transform 0.5s ease-out, filter 0.5s ease-out;
     margin-bottom: 20px;
   }
+  .Travel .Texas {
+    width: 350px;
+    height: 350px;
+    flex: 50%;
+    background-image: url("/Images/texasflowers.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(10px 20px 15px #4e6eb9);
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+    margin-bottom: 20px;
+  }
+  .Travel .Korea {
+    width: 350px;
+    height: 350px;
+    flex: 50%;
+    background-image: url("/Images/koreaOne.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(10px 20px 15px #4e6eb9);
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+    margin-bottom: 20px;
+  }
+  .Travel .Thailand {
+    width: 350px;
+    height: 350px;
+    flex: 50%;
+    background-image: url("/Images/bangkokTwo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(10px 20px 15px #4e6eb9);
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+    margin-bottom: 20px;
+  }
 
   .Travel .London:hover,
   .Travel .Jamaica:hover,
-  .Travel .Nantucket:hover {
+  .Travel .Nantucket:hover,
+  .Travel .Korea:hover,
+  .Travel .Texas:hover,
+  .Travel .Thailand:hover
+   {
     transform: scale(1.05) translate(none);
     transition: transform 0.3s ease-out, filter 0.3s ease-in-out;
   }
@@ -404,7 +446,10 @@
 
   .Travel .London:hover .mask,
   .Travel .Jamaica:hover .mask,
-  .Travel .Nantucket:hover .mask {
+  .Travel .Nantucket:hover .mask, 
+  .Travel .Korea:hover .mask,
+  .Travel .Texas:hover .mask,
+  .Travel .Thailand:hover .mask{
     opacity: 1;
   }
 
@@ -420,11 +465,75 @@
   .Travel .Jamaica:hover .mask h2,
   .Travel .Jamaica:hover .mask a,
   .Travel .Nantucket:hover .mask h2,
-  .Travel .Nantucket:hover .mask a {
+  .Travel .Nantucket:hover .mask a,
+  .Travel .Texas:hover .mask h2,
+  .Travel .Texas:hover .mask a,
+  .Travel .Thailand:hover .mask h2,
+  .Travel .Thailand:hover .mask a,
+  .Travel .Korea:hover .mask h2,
+  .Travel .Korea:hover .mask a{
     opacity: 1;
     transform: scale(1);
   }
 
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    min-height: 400px;
+  }
+  .popup-content h2{
+    text-align: center;
+  }
+  .popup-content label{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .popup-content option{
+   text-align:center;
+  }
+
+  .popup-content select,
+  .popup-content button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
   .London .navbar a.active {
     color: black;
   }
@@ -524,12 +633,10 @@
     width: 300px;
     z-index: 0;
   }
-
   .London .gallery::-webkit-scrollbar {
     display: none;
   }
-
-  .About .background {
+  .contact .background {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -540,50 +647,85 @@
     margin-top: 0;
     padding-top: 0;
   }
-
-  .About .background .content {
-    color: white;
-    text-align: center;
-  }
-
-  .About .background h1 {
+  .contact h2{
     font-size: 50px;
-    padding-bottom: 15px;
+    text-align: center;
   }
 
-  .About .background h3 {
-    max-width: 800px;
-    font-size: 25px;
-    align-items: center;
+  .contact-section form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 190%;
+    transform: translateX(-100px);
+    max-width: 500px;
+    max-height: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     text-align: center;
-    position: relative;
-    animation: float 6s linear infinite;
+    overflow: hidden;
+
   }
-  .About .navbar {
+  .contact-section h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: black;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    resize: vertical;
+  }
+  button[type="submit"] {
+    background: #6a5acd;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  button[type="submit"]:hover {
+    background: #5a4bb5;
+  }
+  #contact-confirmation {
+    min-height: 24px; 
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .contact .navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
   }
-  .About .navbar a.active {
+  .contact .navbar a.active {
     color: black;
   }
-  .About button:hover,
-  .About a.info:hover {
+  .contact button:hover,
+  .contact a.info:hover {
     background-color: whitesmoke;
-  }
-  .fade-in, .fade-inTwo *{
-    opacity:0;
-    animation: fadeIn 2s ease-in forwards;
-  }
-  @keyframes fadeIn{
-    from{
-      opacity:0;
-    }
-    to{
-      opacity: 1;
-    }
   }
   .Jamaica .navbar {
     position: absolute;
@@ -772,6 +914,248 @@
   .Nantucket .photoA img:hover, 
   .Nantucket .photoB img:hover {
     opacity: 1
+}
+
+.Texas .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.Texas .entryphoto {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url("/Images/texasOne.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -3;
+  margin-top: 0;
+  padding-top: 0;
+}
+.Texas .entryphoto h1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: 25vh;
+  transform: translateY(150px);
+  font-size: 50px;
+}
+.Texas .entryphoto p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: px;
+  transform: translateY(155px);
+  font-size: 20px;
+  z-index: 1;
+}
+.Texas .intro-field {
+  max-width: 900px;
+  margin-left: 0;
+  align-items: center;
+  transform: translateX(200px);
+  display: flex;
+  flex-direction: column;
+}
+
+.Texas .intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 50px;
+  align-items: center;
+  width: 100%;
+}
+.flag-cubes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.cube {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  transition: transform 0.6s, background-color 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.cube.flipped[data-color="blue"] {
+  background-color: #002868;
+}
+
+.cube.flipped[data-color="white"] {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+}
+
+.cube.flipped[data-color="red"] {
+  background-color: #bf0a30;
+}
+.flag-overlay {
+  position: absolute;
+  top: calc(50% - -990px);
+  left: calc(50% - 225px);
+  transform: translate(0, 0);
+  width: 90px;
+  height: 60px;
+  z-index: 5;
+  pointer-events: none;
+}
+.Korea .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.Korea .entryphoto {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url("/Images/koreaOne.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -3;
+  margin-top: 0;
+  padding-top: 0;
+}
+.Korea .entryphoto h1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: 25vh;
+  transform: translateY(150px);
+  font-size: 50px;
+}
+.Korea .entryphoto p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: px;
+  transform: translateY(155px);
+  font-size: 20px;
+  z-index: 1;
+}
+.Korea .intro-field {
+  max-width: 900px;
+  margin-left: 0;
+  align-items: center;
+  transform: translateX(250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.Korea .intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 50px;
+  align-items: center;
+  width: 100%;
+}
+.gif {
+  display: block;
+  margin: 70px auto;
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+.Thailand .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.Thailand .entryphoto {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url("/Images/bangkokOne.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -3;
+  margin-top: 0;
+  padding-top: 0;
+}
+.Thailand .entryphoto h1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: 25vh;
+  transform: translateY(150px);
+  font-size: 50px;
+}
+.Thailand .entryphoto p {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fffcf5;
+  position: relative;
+  padding-top: px;
+  transform: translateY(155px);
+  font-size: 20px;
+  z-index: 1;
+}
+.Thailand .intro-field {
+  max-width: 900px;
+  margin-left: 0;
+  align-items: center;
+  transform: translateX(250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.Thailand .intro p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 50px;
+  align-items: center;
+  width: 100%;
+}
+.street img {
+  display: block;
+  margin: 70px auto;
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 1.5s ease, box-shadow 1.5s ease;
+}
+.street img:hover {
+  transform: rotate(15deg) translateY(-20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 @media screen and (max-width: 786px) {
   body {

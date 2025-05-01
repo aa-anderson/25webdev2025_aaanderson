@@ -15,7 +15,7 @@
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="travel.html" class="active">Travel</a></li>
       </ul>
     </nav>
@@ -30,6 +30,39 @@
         </h3>
       </div>
     </div>
+    <div id="quiz-popup" class="popup-overlay">
+      <div class="popup-content">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <h2>Find Your Next Destination</h2>
+    
+        <label for="mood">How are you feeling?</label>
+        <select id="mood">
+          <option value="">Select one</option>
+          <option value="adventurous">Adventurous</option>
+          <option value="relaxed">Relaxed</option>
+          <option value="nostalgic">Nostalgic</option>
+        </select>
+    
+        <label for="weather">Preferred Weather?</label>
+        <select id="weather">
+          <option value="">Select one</option>
+          <option value="warm">Warm & Sunny</option>
+          <option value="cool">Cool & Crisp</option>
+        </select>
+    
+        <label for="vibe">Your Ideal Vibe?</label>
+        <select id="vibe">
+          <option value="">Select one</option>
+          <option value="city">City Life</option>
+          <option value="beach">Beach</option>
+          <option value="quiet">Peaceful</option>
+        </select>
+    
+        <button id="destination-button">Suggest a Place</button>
+        <div id="destination-result"></div>
+      </div>
+    </div>
+    
 
     <div class="gallery">
       <div class="London">
@@ -44,14 +77,33 @@
           <a class="info" href="Jamaica.html">Learn More</a>
         </article>
       </div>
-
       <div class="Nantucket">
         <article class="mask">
           <h2>Nantucket</h2>
           <a class="info" href="Nantucket.html">Learn More</a>
         </article>
       </div>
+ 
+      <div class="Thailand">
+        <article class="mask">
+          <h2>Thailand</h2>
+          <a class="info" href="Thailand.html">Learn More</a>
+        </article>
+      </div>
+      <div class="Korea">
+        <article class="mask">
+          <h2>Korea</h2>
+          <a class="info" href="Korea.html">Learn More</a>
+        </article>
+      </div>
+      <div class="Texas">
+        <article class="mask">
+          <h2>Texas</h2>
+          <a class="info" href="Texas.html">Learn More</a>
+        </article>
+      </div>
     </div>
+    
     <div class="squareTwo">
       <div class="socials-text">
         <h2>Connect With Me!</h2>
@@ -73,5 +125,7 @@
         </ul>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
