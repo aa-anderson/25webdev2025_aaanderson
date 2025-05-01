@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('#image-map .pin').each(function () {
     const $pin = $(this);
     const xpos = $pin.data('xpos');
@@ -17,14 +16,14 @@ $(document).ready(function () {
     const tooltip = $(this).find('.tooltip');
     hideTimeout = setTimeout(() => {
       tooltip.removeClass('show');
-    }, 500);
+    }, 1000);
   });
   $('.tooltip').on('mouseenter', () => clearTimeout(hideTimeout));
   $('.tooltip').on('mouseleave', function () {
     const tooltip = $(this);
     hideTimeout = setTimeout(() => {
       tooltip.removeClass('show');
-    }, 500);
+    }, 1000);
   });
 
   const $popup = $('#quiz-popup');
@@ -32,14 +31,12 @@ $(document).ready(function () {
   const $button = $('#destination-button');
   const $result = $('#destination-result');
   let popupShown = false;
-
   $(window).on('scroll', function () {
     if (!popupShown && $(window).scrollTop() > 200) {
       $popup.fadeIn().css('display', 'flex');
       popupShown = true;
     }
   });
-
   $closeBtn.on('click', function () {
     $popup.fadeOut();
   });
@@ -53,7 +50,6 @@ $(document).ready(function () {
       { name: "South Korea", link: "Korea.html" },
       { name: "Texas", link: "Texas.html" }
     ];
-
     const selected = destinations[Math.floor(Math.random() * destinations.length)];
     $result.html(`
       <p>Start your next adventure in <strong>${selected.name}</strong>!</p>
@@ -64,14 +60,15 @@ $(document).ready(function () {
   $('#contact-form').on('submit', function (e) {
     e.preventDefault();
     this.reset();
-  
+
     const $button = $('#contact-form button[type="submit"]');
     const originalText = $button.text();
-  
     $button.text('Sent ✓').prop('disabled', true);
-  
     setTimeout(() => {
       $button.text(originalText).prop('disabled', false);
     }, 2000);
+  });
+  $('.cube').on('click', function () {
+    $(this).toggleClass('flipped');
   });
 });
