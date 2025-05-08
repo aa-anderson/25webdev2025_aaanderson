@@ -30,13 +30,10 @@ $(document).ready(function () {
   const $closeBtn = $('#close-popup');
   const $button = $('#destination-button');
   const $result = $('#destination-result');
-  let popupShown = false;
-  $(window).on('scroll', function () {
-    if (!popupShown && $(window).scrollTop() > 200) {
-      $popup.fadeIn().css('display', 'flex');
-      popupShown = true;
-    }
-  });
+  if (!localStorage.getItem('hasVisitedTravelPage')) {
+    $popup.css('display', 'flex').hide().fadeIn(300);
+    localStorage.setItem('hasVisitedTravelPage', 'true');
+  }
   $closeBtn.on('click', function () {
     $popup.fadeOut();
   });

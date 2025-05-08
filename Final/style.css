@@ -952,6 +952,7 @@
   flex-wrap: wrap;
   margin-top: 90px;
   gap: 10px;
+  align-items: center;
   margin-bottom: 50px;
 }
 .cube {
@@ -961,6 +962,7 @@
   transition: transform 0.6s, background-color 0.6s;
   transform-style: preserve-3d;
   cursor: pointer;
+  align-items: center;
   border-radius: 4px;
 }
 .cube.flipped[data-color="blue"] {
@@ -981,6 +983,7 @@
   width: 90px;
   height: 60px;
   z-index: 5;
+  align-items: center;
   pointer-events: none;
 }
 .Korea .navbar {
@@ -1144,7 +1147,7 @@
     background-position: top;
   }
   .Home .introPhoto img {
-   display: none; 
+    display: none;
   }
   .Home .slogan h1 {
     font-size: 28px;
@@ -1159,11 +1162,10 @@
     text-align: center;
     align-items: center;
   }
-  .Home .intro p{
-    transform: translateX(50px);
-  }
-  .Home .intro h2{
-    transform: translateX(50px);
+  .Home .intro p,
+  .Home .intro h2 {
+    transform: none;
+    padding: 0 10px;
   }
   .Home .intro-field {
     padding: 0 20px;
@@ -1172,158 +1174,128 @@
     align-items: center;
   }
   .Home .gallery {
-    z-index: 1;
     overflow-x: auto;
+    z-index: 1;
   }
   .Home .gallery-field img {
     max-width: 100%;
     height: 80vh;
     object-fit: cover;
-    width: auto;
   }
   .Travel .intro {
     height: auto;
     padding: 20px;
     text-align: center;
   }
-  .Travel .Quote h3{
+  .Travel .Quote h3 {
     font-size: 24px;
+  }
+  .Travel .gallery {
+    margin: 10px 0 20px;
+    grid-template-columns: 1fr !important;
+  }
+  .Travel .London .info,
+  .Travel .Jamaica .info,
+  .Travel .Nantucket .info {
+    font-size: 10px;
+    text-align: center;
   }
   .London .entryphoto {
     height: 70vh;
     background-position: top;
   }
-  .London .intro {
+  .London .intro,
+  .Jamaica .intro,
+  .Nantucket .intro,
+  .Thailand .intro,
+  .Texas .intro,
+  .Korea .intro {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    padding-top: 0;
-}
-.London .intro p {
-    width: 100%;
-    transform: translateX(-200px);
-    max-width: 200%; 
-    text-align: center;
-    padding-bottom: 0;
-}
-  .London .intro-field {
-    max-width: 100%;
-  }
-  .London .gallery {
-    overflow-x: auto;
-    z-index: 1;
-  }
-  .London .gallery-field img {
-    max-width: 100%;
-    height: 80vh; 
-    object-fit: cover;
-    width: auto;
-  }
-  .About .background h3{
-    font-size: 14px;
-  }
-  .About .background h1{
-    font-size: 25px;
-  }
-  .Travel .gallery{
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  .Travel .London .info{
-    text-align: center;
-    font-size: 10px;
-  }
-  .Travel .Jamaica .info{
-    text-align: center;
-    font-size: 10px;
-  }
-  .Travel .Nantucket .info{
-    text-align: center;
-    font-size: 10px;
-  }
-
-  .Jamaica .entryphoto {
-    height: 70vh ;
-    background-size: cover ;
-    background-position: center;
-  }
-  .Jamaica .intro {
-    width: 100%;
-    max-width: 100%; 
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    padding-top: 0;
-}
-.Jamaica .intro p {
-    width: 100%;
-    transform: translateX(-200px);
-    max-width: 200%; 
-    text-align: center;
-    padding-bottom: 0;
-}
-  .Jamaica .gallery-grid {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column ; 
     justify-content: center;
     align-items: center;
-    width: 100%;
-    gap: 15px ;
-    padding: 10px ;
-    overflow-x: hidden ; 
-    transform: translateX(-200px);
-  }
-
-  .Jamaica .gallery-grid img {
-    width: 80% ; 
-    max-width: 350px ;
-    height: auto ;
-    object-fit: cover ;
-    display: block ;
-    border-radius: 8px ;
-    margin: 0 auto ;
-  }
-  .Nantucket .entryphoto {
-    height: 70vh;
-    background-position: center;
-  }
-.Nantucket .intro {
-    width: 100%;
-    max-width: 100%; 
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
     text-align: center;
     padding-top: 0;
-}
-.Nantucket .intro p {
+  }
+  .London .intro p,
+  .Jamaica .intro p,
+  .Nantucket .intro p,
+  .Thailand .intro p,
+  .Texas .intro p,
+  .Korea .intro p {
+    transform: none;
     width: 100%;
-    transform: translateX(-200px);
-    max-width: 200%; 
     text-align: center;
-    padding-bottom: 0;
-}
+    padding: 0 15px;
+  }
+  .London .intro-field,
+  .Jamaica .intro-field,
+  .Nantucket .intro-field,
+  .Thailand .intro-field,
+  .Texas .intro-field,
+  .Korea .intro-field {
+    max-width: 100%;
+    transform: none;
+    padding: 0 10px;
+  }
+  .London .gallery,
+  .Nantucket .gallery {
+    overflow-x: auto;
+  }
+  .London .gallery-field img,
+  .Nantucket .gallery-field img {
+    max-width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .Jamaica .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  }
+  .Jamaica .gallery-grid img {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+  }
   .Nantucket .photoA img,
   .Nantucket .photoB img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    transform: none; 
+    transform: none;
     margin: auto;
     padding: 0;
   }
-.Nantucket .photoA img{
-  padding-top: 30px;
-}
+  .Nantucket .photoA img {
+    padding-top: 30px;
+  }
+  .contact-section form {
+    width: 100%;
+    transform: none;
+    padding: 20px;
+  }
+  .popup-content {
+    width: 90%;
+    padding: 20px;
+  }
+  .popup-content h2 {
+    font-size: 20px;
+  }
+  .popup-content label,
+  .popup-content select,
+  .popup-content button {
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .close-popup {
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+  }
 }
